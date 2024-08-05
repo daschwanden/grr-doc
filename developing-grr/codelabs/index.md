@@ -62,8 +62,8 @@ You can now access the Codelabs by pointing your browser to [http://localhost:90
 
 Pointing your browser to [http://localhost:9090/how-to-add-a-client-action/index.html](http://localhost:9090/how-to-add-a-client-action/index.html) should load the Client Action codelab depicted below.
 
-![How to add a client action](../assets/how-to-add-a-client-action.png "How to add a client action")
+![How to add a client action](./assets/how-to-add-a-client-action.png "How to add a client action")
 
 When pointing your browser to [http://localhost:9090/how-to-add-a-flow/index.html](http://localhost:9090/how-to-add-a-flow/index.html) you should see the Flow codelab depicted below.
 
-![How to add a client action](../assets/how-to-add-a-client-action.png "How to add a client action")
+![How to add a client action](./assets/how-to-add-a-client-action.png "How to add a client action")
