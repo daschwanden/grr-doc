@@ -18,21 +18,21 @@ Follow the instructions here to start the container image either as a Cloud Work
 
 Once you have the container image up and running you access the Code OSS environment in your browser.
 
-![grr_code_oss](../../images/grr_code_oss.png)
+![grr_code_oss](../images/grr_code_oss.png)
 
 - You can now click on the Open Folder button to select ```/home/user/src/grr``` as the base directory.
 - This directory contains both the grr repository pre-cloned for you.
 
-![grr_code_explore](../../images/grr_code_explore.png)
+![grr_code_explore](../images/grr_code_explore.png)
 
 - From here you can start exploring the ```grr``` code base.
 - Next we open a Terminal Panel by selecting the ```Terminal -> New Terminal``` option available from the top left menu button.
 
-![grr_rode_oss_menu](../../images/grr_code_oss_menu.png)
+![grr_code_menu](../images/grr_code_menu.png)
 
 - This provides you with a Terminal Panel to execute the shell commands we will execute in the following steps.
 
-![grr_code_terminal](../../images/grr_code_terminal.png)
+![grr_code_terminal](../images/grr_code_terminal.png)
 
 > **NOTE:** Optional: In case you choose to use your own development environment setup instead then navigate to your GRR base directory (or clone the repository if you have not done it yet):
 
@@ -51,7 +51,7 @@ First we create the [certificates and keys](../..//installing-and-running-grr/vi
 ./docker_config_files/init_certs.sh
 ```
 
-![grr_certs_keys](../../images/grr_cert_keys.png)
+![grr_certs_keys](../images/grr_certs_keys.png)
 
 We are now ready to run GRR with the [Docker Compose stack](../../installing-and-running-grr/via-docker-compose.html#starting-the-stack) by running the command below.
 
@@ -59,14 +59,14 @@ We are now ready to run GRR with the [Docker Compose stack](../../installing-and
 docker compose up -d
 ```
 
-![grr_compose_up](../../images/grr_compose_up.png)
+![grr_compose_up](../images/grr_compose_up.png)
 
 When we run this command the first time Docker has to pull all the container images. This will take a short while depending on your internet connectivity.
 
 - Wait for Docker Compose to report that all the containers have started.
-- You can then run ```docker ps`` to verify that all components started successfully.
+- You can then run ```docker ps``` to verify that all components started successfully.
 
-![grr_components_up](../../images/grr_components_up.png)
+![grr_components_up](../images/grr_components_up.png)
 
 
 For more information you can read up on [Running in a Docker Compose Stack](../../installing-and-running-grr/via-docker-compose.html).
@@ -75,24 +75,25 @@ For more information you can read up on [Running in a Docker Compose Stack](../.
 
 With all that in place we are ready to access GRR.
 
-You can now access GRR by either pointing your browser to [http://localhost:8000](http://localhost:8000) in case you are running the IDE container on your computer or by typing ```http://localhost:8000``` into the Terminal Panel and then ```Ctrl Click``` on ita
-.
-![grr_clients](../../images/grr_clients.png)
+You can now access GRR by either pointing your browser to [http://localhost:8000](http://localhost:8000) in case you are running the IDE container on your computer or by typing ```http://localhost:8000``` into the Terminal Panel and then ```Ctrl Click``` on it.
 
-![grr_client_details](../../images/grr_client_details.png)
+![grr_clients](../images/grr_clients.png)
+
+
+![grr_client_details](../images/grr_client_details.png)
 
 - Let's run a simple ```ListProcesses``` Flow to check the end-to-end connectivity.
 
-![grr_run_flow](../../images/grr_run_flow.png)
+![grr_run_flow](../images/grr_run_flow.png)
 
 - Verify that the ```ListProcesses``` Flow completed successfully.
 
-![grr_flow_success](../../images/grr_flow_success.png)
+![grr_flow_success](../images/grr_flow_success.png)
 
 - Last but not least we switch GRR into ```Debug Mode``` by clicking on the cogwheel icon button on the top right of the screen.
 - This sets us up for the development work.
 
-![grr_debug_mode](../../images/grr_debug_mode.png)
+![grr_debug_mode](../images/grr_debug_mode.png)
 
 ## Step 4. Development
 
@@ -101,16 +102,16 @@ It is now time to set up the Docker Compose stack for development.
 - Go back to your Terminal Panel and type ```docker compose watch``` to start the Docker Compose stack for development.
 - This will build everything from scratch and will taek a couple of minutes the first time you run it.
 
-![grr_development](../../images/grr_development.png)
+![grr_development](../images/grr_development.png)
 
 - And here we go, we are now ready to develop GRR from the IDE in our browser.
 
-![grr_dev_ready](../../images/grr_dev_ready.png)
+![grr_dev_ready](../images/grr_dev_ready.png)
 
 - Do any change to the GRR code base and notice how Docker Compose picks up on the changes and then propagates and applies them to the running applicaiton in the containers.
 - You should see your changes being applied and going live within seconds.
 
-![grr_changes_applied](../../images/grr_changes_applied.png)
+![grr_changes_applied](../images/grr_changes_applied.png)
 
 ## Step 5. Codelabs
 
@@ -118,13 +119,15 @@ In case you are not ready yet to do your own coding you can run through one of o
 
 Either point your browser to [http://localhost:9090](http://localhost:9090) in case you are running the IDE container on your computer or by typing ```http://localhost:9090``` into the Terminal Panel and then ```Ctrl Click``` on it.
 
-![grr_claat](../../images/grr_claat.png)
+![grr_claat](../images/grr_claat.png)
 
 - Choose either of the ```how-to-add…``` links (without the ```.md```) to select the respective Codelab you want to run.
 
-![grr_codelab_client](../../images/grr_codelab_client.png)
+![grr_codelab_client](../images/grr_codelab_client.png)
 
-![grr_codelab_flow](../../images/grr_codelab_flow.png)
+![grr_codelab_flow](../images/grr_codelab_flow.png)
+
+You can also add/adjust your own codelabs. Refer to the [codelabs documentation](./codelabs/index.html) for more info.
 
 ## Step 6. Database
 
@@ -133,6 +136,6 @@ In case you would like to access the GRR and Fleetspeak databases you can do so 
 
 You can find the database names and access credentials [here](https://github.com/google/grr/blob/master/docker_config_files/mysql/.env): [https://github.com/google/grr/blob/master/docker_config_files/mysql/.env](https://github.com/google/grr/blob/master/docker_config_files/mysql/.env)
 
-![grr_database](../../images/grr_database.png)
+![grr_database](../images/grr_database.png)
 
-![fleetspeak_database](../../images/fleetspeak_database.png)
+![fleetspeak_database](../images/fleetspeak_database.png)
