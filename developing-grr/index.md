@@ -11,4 +11,5 @@ Contributing code <contributing.md>
 Contributing documentation <contributing-docs.md>
 Implementation details <implementation-details/index.md>
 Codelabs <codelabs/index.md>
+GRR Workstation <workstation/index.md>
 ```

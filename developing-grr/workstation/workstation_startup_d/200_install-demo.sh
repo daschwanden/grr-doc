@@ -1,0 +1,42 @@
+# Copyright 2024 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#!/bin/bash
+# shellcheck disable=SC1091
+export USER=user
+BASE=$(pwd)
+export BASE
+export LC_ALL=C.UTF-8
+echo "-----------------"
+echo "Waiting for Docker to start"
+while (! docker stats --no-stream ); do
+  # Docker takes a few seconds to initialize
+  echo "Waiting for Docker to launch..."
+  sleep 1
+done
+echo "-----------------"
+echo "Synchronising repos..."
+if [ ! -f /home/user/src/grr/README.md ]; then
+  cp -R /var/src /home/user/src
+  chown -R user:user /home/user/src
+fi
+cd /home/user/src/grr/
+git pull
+echo "-----------------"
+echo "Starting claat..."
+cd /home/user/src/grr/codelabs
+claat serve &
+echo "-----------------"
+cd "$BASE" || exit
+echo "demo installation done"
+echo "-----------------"

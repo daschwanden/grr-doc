@@ -14,7 +14,7 @@ For illustration purposes this guide follows a user journey that leverages a Cod
 
 For your convenience container image comes with all the source code and tooling preinstalled.
 
-Follow the instructions here to start the container image either as a Cloud Workstation or on your own computer.
+Follow the [instructions here](./workstation/index.md) to build and start the container image either as a Cloud Workstation or on your own computer.
 
 Once you have the container image up and running you access the Code OSS environment in your browser.
 
@@ -53,7 +53,7 @@ First we create the [certificates and keys](../installing-and-running-grr/via-do
 
 ![grr_certs_keys](../images/grr_certs_keys.png)
 
-We are now ready to run GRR with the [Docker Compose stack](../installing-and-running-grr/via-docker-compose.md#starting-the-stack) by running the command below.
+We are now ready to run GRR with the [Docker Compose stack](../installing-and-running-grr/via-docker-compose.md#generate-certificates-and-keys) by running the command below.
 
 ```
 docker compose up -d
@@ -69,7 +69,7 @@ When we run this command the first time Docker has to pull all the container ima
 ![grr_components_up](../images/grr_components_up.png)
 
 
-For more information you can read up on [Running in a Docker Compose Stack](../installing-and-running-grr/via-docker-compose.html).
+For more information you can read up on [Running in a Docker Compose Stack](../installing-and-running-grr/via-docker-compose.md).
 
 ## Step 3. Accessing GRR
 
