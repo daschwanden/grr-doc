@@ -23,12 +23,12 @@ docker build -t grr-station .
 ```
 
 Note
-- The Cloud Workstation setup takes advantage of mounting a [Cloud Firestore](https://cloud.google.com/filestore/docs/overview) shared (NFS) directory that can be used for sharing files between workstations (i.e. for convenient collaboration between team members).
-- The setup works fine without that shared Cloud Filestore directory in case you do not require that feature you need to do nothing extra.
-- However, in case you want to take advantage of the shared directory then follow the instructions in the [Cloud Filestore online documentation](https://cloud.google.com/filestore/docs/creating-instances) to get a Filestore created that can be mounted into the Cloud Workstations.
-- Make sure you set the following two environment variables when you [create your workstation configuration](https://cloud.google.com/workstations/docs/create-configuration).
--- ```FILESTORE_INSTANCE_IP: xxx.xxx.xxx.xxx```
--- ```FILESTORE_SHARE_NAME: workstations```
+* The Cloud Workstation setup takes advantage of mounting a [Cloud Firestore](https://cloud.google.com/filestore/docs/overview) shared (NFS) directory that can be used for sharing files between workstations (i.e. for convenient collaboration between team members).
+* The setup works fine without that shared Cloud Filestore directory in case you do not require that feature you need to do nothing extra.
+* However, in case you want to take advantage of the shared directory then follow the instructions in the [Cloud Filestore online documentation](https://cloud.google.com/filestore/docs/creating-instances) to get a Filestore created that can be mounted into the Cloud Workstations.
+* Make sure you set the following two environment variables when you [create your workstation configuration](https://cloud.google.com/workstations/docs/create-configuration).
+ * ```FILESTORE_INSTANCE_IP: xxx.xxx.xxx.xxx```
+ * ```FILESTORE_SHARE_NAME: workstations```
 
 ## 2. Run the GRR Workstation on Google Cloud
 
@@ -36,8 +36,10 @@ Refer to the [Google Cloud online documentation](https://cloud.google.com/workst
 
 1. [Create a workstation cluster](https://cloud.google.com/workstations/docs/quickstart-set-up-workstations-console#create_a_workstation_cluster)
 2. [Create a workstation configuration](https://cloud.google.com/workstations/docs/quickstart-set-up-workstations-console#create_a_workstation_configuration), make sure you select your ```grr-station``` container image when you create your configuration.
+
 ![grr_ws_config](../../images/grr_ws_config.png)
-3. [Create and launch a workstation}(https://cloud.google.com/workstations/docs/quickstart-set-up-workstations-console#create_and_launch_a_workstation)
+
+3. [Create and launch a workstation](https://cloud.google.com/workstations/docs/quickstart-set-up-workstations-console#create_and_launch_a_workstation)
 
 ## 3. Run the GRR Workstation locally
 
@@ -47,7 +49,7 @@ Please note that your mileage might vary depending on the spec of your machine.
 
 ```
 docker run --rm -d --env='DOCKER_OPTS=' --volume=/var/lib/docker --privileged \
-           --name demo -p 8080:80 -p 8000:8000 -p9090:9090 grr-station
+           --name grr-station -p 8080:80 -p 8000:8000 -p9090:9090 grr-station
 ```
 
 You can now connect to the
