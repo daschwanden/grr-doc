@@ -43,7 +43,7 @@ cd grr/
 
 ## Step 2. Start GRR with Docker Compose
 
-First we create the [certificates and keys](../..//installing-and-running-grr/via-docker-compose.html#generate-certificates-and-keys).
+First we create the [certificates and keys](../installing-and-running-grr/via-docker-compose.md#generate-certificates-and-keys).
 
 ```
 # This is a ONE OFF step that you only have to execute once in this IDE environment
@@ -53,7 +53,7 @@ First we create the [certificates and keys](../..//installing-and-running-grr/vi
 
 ![grr_certs_keys](../images/grr_certs_keys.png)
 
-We are now ready to run GRR with the [Docker Compose stack](../../installing-and-running-grr/via-docker-compose.html#starting-the-stack) by running the command below.
+We are now ready to run GRR with the [Docker Compose stack](../installing-and-running-grr/via-docker-compose.md#starting-the-stack) by running the command below.
 
 ```
 docker compose up -d
@@ -69,7 +69,7 @@ When we run this command the first time Docker has to pull all the container ima
 ![grr_components_up](../images/grr_components_up.png)
 
 
-For more information you can read up on [Running in a Docker Compose Stack](../../installing-and-running-grr/via-docker-compose.html).
+For more information you can read up on [Running in a Docker Compose Stack](../installing-and-running-grr/via-docker-compose.html).
 
 ## Step 3. Accessing GRR
 
@@ -100,7 +100,7 @@ You can now access GRR by either pointing your browser to [http://localhost:8000
 It is now time to set up the Docker Compose stack for development.
 
 - Go back to your Terminal Panel and type ```docker compose watch``` to start the Docker Compose stack for development.
-- This will build everything from scratch and will taek a couple of minutes the first time you run it.
+- This will build everything from scratch and will take a couple of minutes the first time you run it.
 
 ![grr_development](../images/grr_development.png)
 
@@ -127,14 +127,13 @@ Either point your browser to [http://localhost:9090](http://localhost:9090) in c
 
 ![grr_codelab_flow](../images/grr_codelab_flow.png)
 
-You can also add/adjust your own codelabs. Refer to the [codelabs documentation](./codelabs/index.html) for more info.
+You can also add/adjust your own codelabs. Refer to the [codelabs documentation](./codelabs/index.md) for more info.
 
 ## Step 6. Database
 
 In case you would like to access the GRR and Fleetspeak databases you can do so by clicking on the Database icon in the left hand side navigation bar (second icon from the bottom).
 
-
-You can find the database names and access credentials [here](https://github.com/google/grr/blob/master/docker_config_files/mysql/.env): [https://github.com/google/grr/blob/master/docker_config_files/mysql/.env](https://github.com/google/grr/blob/master/docker_config_files/mysql/.env)
+You can find the database names and access credentials in the following file: [https://github.com/google/grr/blob/master/docker_config_files/mysql/.env](https://github.com/google/grr/blob/master/docker_config_files/mysql/.env)
 
 ![grr_database](../images/grr_database.png)
 
